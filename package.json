@@ -1,0 +1,50 @@
+{
+  "name": "Test",
+  "version": "2.0.0",
+  "author": "Test",
+  "license": "UNLICENSED",
+  "scripts": {
+    "analyze": "node codegen/components && webpack --mode=production --env.analyzer",
+    "analyze:static": "node codegen/pages && webpack --progress --mode=production --env.static --env.analyzer",
+    "build": "node codegen/components && webpack --mode=production",
+    "build:static": "node codegen/all && webpack --mode=production --env.static",
+    "dev": "node codegen/all && webpack-dev-server --mode=development --env.static",
+    "lint": "eslint --ext js,jsx ./source",
+    "lint:fix": "eslint --ext js,jsx ./source --fix",
+    "test:ui": "testcafe chrome:headless ./tests/*.js",
+    "upd": "yarn upgrade-interactive --latest"
+  },
+  "dependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/eslint-parser": "^7.18.2",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "@creuna/codegen": "^0.3.0",
+    "@creuna/utils": "^1.1.0",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.0.0",
+    "eslint": "^8.14.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.0.1",
+    "prettier": "^2.0.5",
+    "prop-types": "^15.5.7",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "react-router-dom": "^6.3.0",
+    "webpack": "^4.10.1",
+    "webpack-cli": "^3.0.2",
+    "webpack-dev-server": "^3.1.4",
+    "webpack-manifest-plugin": "^2.0.3"
+  },
+  "devDependencies": {
+    "eslint-plugin-view-models": "^0.1.0",
+    "eslint-webpack-plugin": "^3.1.1",
+    "view-models": "^2.2.0",
+    "webpack-fix-style-only-entries": "^0.6.1"
+  }
+}
