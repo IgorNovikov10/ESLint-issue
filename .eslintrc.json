@@ -1,0 +1,39 @@
+{
+  "root": true,
+  "plugins": ["prettier", "react", "eslint-plugin-view-models"],
+  "extends": ["eslint:recommended", "prettier"],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "classes": true,
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "rules": {
+    "view-models/no-errors": "error",
+    "view-models/no-unused-meta": "warn",
+    "view-models/no-meta-mismatch": "warn",
+    "view-models/no-prop-mapping": "warn",
+    "prettier/prettier": [
+      "warn",
+      {
+        "endOfLine": "auto",
+        "singleQuote": true,
+        "arrowParens": "avoid",
+        "trailingComma": "es5"
+      }
+    ]
+  },
+  "settings": {
+    "react": {
+      "version": "16.3"
+    }
+  }
+}
